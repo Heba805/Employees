@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,600&display=swap");
+.body {
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  color: black;
+  background-size: 100%;
+  padding: 0;
+  margin: 1rem;
+  position: relative;
+}
+
+.caption {
+  color: white;
+  background-color: #598bd6;
+  text-align: center;
+  height: 3rem;
+}
+
+.container {
+  background-color: #efeeee;
+  text-align: center;
+}
+
+form {
+  border: solid 2px #cecbcb;
+}
+
+.labelText {
+  font-family: Poppins, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.inputText {
+  width: 60%;
+  text-align: center;
+  margin: .5rem;
+  border: solid 2px #cecbcb;
+  height: 2rem;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #201f1f;
+}
+
+.btn {
+  background-color: #598bd6;
+  color: white;
+  border-radius: 10px;
+  border: solid 2px #cecbcb;
+  height: 2rem;
+  font-family: Poppins, sans-serif;
+  margin: 1rem;
+  width: 5rem;
+}
+
+.msg {
+  border: solid 2px #aff8af;
+  width: 30rem;
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  background-color: white;
+  color: #598bd6;
+}
+/*# sourceMappingURL=add-edit-employee.component.css.map */

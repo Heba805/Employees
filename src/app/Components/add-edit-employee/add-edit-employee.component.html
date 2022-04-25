@@ -1,0 +1,44 @@
+<div class="body">
+    <div class="caption">
+        <h2>Add/Edit employee</h2>
+    </div>
+
+<div class="container" >
+
+<form>
+    <div>
+        
+        <label  for="Name"><span class="labelText">Name :</span></label>
+    
+         <input class="inputText" type="text" id="Name" [(ngModel)]="nameInput" name="Name"> 
+    </div>
+    <br>
+    <div>
+        <label class="labelText" for="Age">Age :</label>
+         <input class="inputText" type="text" id="Age" [(ngModel)]="ageInput" name="Age"> 
+    </div>
+    <br>
+    <div>
+        <label class="labelText" for="Salary">Salary :</label>
+         <input class="inputText" type="text" id="Salary" [(ngModel)]="salaryInput" name="Salary"> 
+    </div>
+    <br>
+    <div>
+        <label class="labelText" for="Email">Email :</label>
+         <input class="inputText" type="text" id="Email" [(ngModel)]="emailInput" name="Email"> 
+    </div>
+    <br>
+    <div>
+        <input class="btn" type="Submit" value="Submit" (click)="checkMood()" > 
+
+    </div>
+</form>
+
+</div>
+ 
+<div class="msg" id="msg" *ngIf="divRendringFlag">
+    <h3>Employee Added successfully</h3>
+</div>
+
+
+</div>

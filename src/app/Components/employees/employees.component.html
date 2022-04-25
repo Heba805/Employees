@@ -1,0 +1,86 @@
+<div class="body">
+    <div class="caption">
+        <h2>Employees</h2>
+    </div>
+
+    <div>
+        
+
+        <input class="search" type="text" id="gsearch" name="gsearch" placeholder="Search" (input)="onSearchChange($event.target.value)">
+        <!-- <h3>Search by</h3> 
+        <br> -->
+        <!-- <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label> -->
+        <button class="btns"   [routerLink]="['/add-edit-employee/']">Add employee</button>
+
+    </div>
+    <div class="container" >
+        <table id="table" width="100%">
+            <thead>
+                
+            <tr>
+                <!-- <span > -->
+
+                <th>Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th >Email</th>
+                <th>Actions</th>
+                <!-- </span> -->
+
+            </tr>
+
+            </thead>
+            <tbody>
+                <tr  *ngFor="let emp of (defultDataFlag ? employeeList : filterdList) ;  let i = index">
+                    <!-- <div *ngIf="emp.renderFlag!==true"> -->
+
+                    <td  class="data"><h6>{{emp.username}}</h6></td>
+                    <td class="data"><h6>{{emp.age}}</h6></td>
+                    <td class="data"><h6>{{emp.salary}}</h6></td>
+                    <td class="data" ><h6>{{emp.email}}</h6></td>
+                    <td *ngIf="emp.renderFlag!==true">
+                        <!-- <button>Add employee</button> -->
+                        
+                        
+
+
+                        <button class="btns" [routerLink]="['/add-edit-employee/' +emp.Id]">Edit employee</button>
+
+                        <button class="btns" style="margin-right: 1rem;" (click)="deleteEmplyee(i)">Delete employee</button>
+
+                    </td>
+                <!-- </div> -->
+
+                </tr>
+            
+                
+                <!-- <tr *ngIf="!renderFlag" *ngFor="let item of filterdList">
+                    <td  class="data"><h6>{{item.username}}</h6></td>
+                    <td class="data"><h6>{{item.age}}</h6></td>
+                    <td class="data"><h6>{{item.salary}}</h6></td>
+                    <td class="data"><h6>{{item.email}}</h6></td>
+                    <td>
+                        <button>Add employee</button>
+                        <button>Edit employee</button>
+                        <button>Delete employee</button>
+
+                    </td>
+
+                </tr> -->
+            
+
+
+            </tbody>
+
+            
+            
+        </table>
+    </div>
+</div>
